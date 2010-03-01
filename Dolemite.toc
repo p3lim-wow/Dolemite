@@ -1,0 +1,7 @@
+## Interface: 30300
+## Author: p3lim
+## Version: Alpha
+## Title: Dolemite
+## Notes: One-click Disenchanting!
+
+Dolemite.lua
