@@ -39,7 +39,7 @@ function button:PLAYER_LOGIN()
 		if(item and Clickable()) then
 
 			local _, _, quality, _, _, type = GetItemInfo(item)
-			if(not (type == ARMOR_TYPE or type == ENCHSLOT_WEAPON) and not (quality > 1 and quality < 5)) then return end
+			if(not (type == ARMOR_TYPE or type == ENCHSLOT_WEAPON) or not (quality and (quality > 1 and quality < 5))) then return end
 
 			local bag, slot = GetMouseFocus():GetParent(), GetMouseFocus()
 			if(GetContainerItemInfo(bag:GetID(), slot:GetID()) and bag ~= PaperDollFrameItemFlyoutButtons) then
